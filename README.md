@@ -2,14 +2,13 @@
 
 This project analyzes **coffee sales, customer demographics, and city-level data** using PostgreSQL. The goal is to uncover business insights, track sales performance, and recommend the best cities for new store expansion.  
 
----
+
 ## 🖼️ Logo
 ![Logo](images/logo.png)
 
 ## 📊 ERD
 ![ERD](images/erd.png)
 
----
 
 ## 🔑 Key Questions Answered
 - Estimated coffee consumers (25% of city population)  
@@ -24,8 +23,6 @@ This project analyzes **coffee sales, customer demographics, and city-level data
 - Market potential analysis (sales, rent, customer base)  
 - **Best cities for expansion based on data**  
 
----
-
 ## 📌 Recommendations
 After analyzing the dataset, the top three cities for new store openings are:  
 
@@ -33,18 +30,11 @@ After analyzing the dataset, the top three cities for new store openings are:
 2. **Delhi** – Largest estimated consumer base (7.7M), highest customer count, rent/customer < 500  
 3. **Jaipur** – Largest number of customers (69), low rent/customer (156), solid sales/customer  
 
----
-
-
----
-
 ## ⚙️ Tools & Techniques
 - PostgreSQL 17 (DDL, DML, Joins, Aggregations, Window Functions)  
 - CSV Import/Export for data loading  
 - Data Analysis using SQL queries  
 - Business reporting & recommendations  
-
----
 
 ## 📈 Key Outcomes
 - Identified **top-selling products & cities**  
@@ -58,8 +48,6 @@ Graduate Student in Computer Science | Software Engineering & Data Analytics
 
 - 💼 Focus: Software Development, Cloud Computing, Data Infrastructure  
 - 🔧 Skills: C++, Python, PostgreSQL, Data Analytics, Cloud Platforms  
-- 📫 Contact: [your_email@example.com]  
-- 🌐 GitHub: [github.com/yourusername](https://github.com/PELLURUMANASA)  
 - 💡 Passionate about **data-driven solutions, scalable systems, and analytics**  
 
 
