@@ -7,7 +7,7 @@ This project analyzes **coffee sales, customer demographics, and city-level data
 ![Logo](images/logo.png)
 
 ## 📊 ERD
-![ERD](images/erd.png)
+![ERD](https://github.com/PELLURUMANASA/Monday_coffee/blob/main/Images/ERD_SCHEMAS.pgerd.png)
 
 
 ## 🔑 Key Questions Answered
