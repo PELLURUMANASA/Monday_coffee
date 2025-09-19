@@ -1,121 +1,67 @@
-# ☕ Monday Coffee Database Project
+# ☕ Monday Coffee SQL Project
 
-![Monday Coffee DB](<img width="1536" height="1024" alt="ChatGPT Image Sep 18, 2025, 09_15_07 PM" src="https://github.com/user-attachments/assets/fe5872ac-bb21-4b91-b83c-402aaad4645a" />
-)
+This project analyzes **coffee sales, customer demographics, and city-level data** using PostgreSQL. The goal is to uncover business insights, track sales performance, and recommend the best cities for new store expansion.  
 
-A PostgreSQL project simulating a **coffee shop database**.  
-It covers database schema design, data import, and advanced queries for analytics.  
+---
+## 🖼️ Logo
+![Logo](images/logo.png)
+
+## 📊 ERD
+![ERD](images/erd.png)
+
+---
+
+## 🔑 Key Questions Answered
+- Estimated coffee consumers (25% of city population)  
+- Total revenue from coffee sales in Q4 2023  
+- Sales count per product (unit-wise breakdown)  
+- Average sales per customer in each city  
+- City population vs estimated coffee consumers  
+- Top 3 selling products in every city  
+- Customer segmentation by city (unique customers)  
+- Average sale vs average rent per customer  
+- Monthly sales growth (trends & rate of change)  
+- Market potential analysis (sales, rent, customer base)  
+- **Best cities for expansion based on data**  
+
+---
+
+## 📌 Recommendations
+After analyzing the dataset, the top three cities for new store openings are:  
+
+1. **Pune** – Highest revenue, strong sales/customer, very low rent/customer  
+2. **Delhi** – Largest estimated consumer base (7.7M), highest customer count, rent/customer < 500  
+3. **Jaipur** – Largest number of customers (69), low rent/customer (156), solid sales/customer  
+
+---
 
 
 ---
 
-## 🗂️ Database Schema
-
-**Database Name:** `Monday_coffee_db`
-
-### Tables
-- **city** → City information  
-- **customers** → Customer details  
-- **products** → Product catalog  
-- **sales** → Sales transactions  
-
-📌 **ER Diagram**  
-![ERD]("C:\Users\Dell\Desktop\SQL Projects\Monday_coffee\ERD_SCHEMAS.pgerd.png")
+## ⚙️ Tools & Techniques
+- PostgreSQL 17 (DDL, DML, Joins, Aggregations, Window Functions)  
+- CSV Import/Export for data loading  
+- Data Analysis using SQL queries  
+- Business reporting & recommendations  
 
 ---
 
-## ⚙️ Setup Instructions
+## 📈 Key Outcomes
+- Identified **top-selling products & cities**  
+- Evaluated **city-wise market potential**  
+- Measured **sales growth & customer distribution**  
+- Built a foundation for **data-driven decision making**  
+## 👩‍💻 Author
 
-### 1. Create Database
-```sql
-CREATE DATABASE "Monday_coffee_db";
-### 2. Load Schema
-\i sql/Schemas.sql
-3. Import Data
-\copy products(product_id, product_name, price) 
-FROM 'tables/products.csv' DELIMITER ',' CSV HEADER;
+**Manasa Pelluru**  
+Graduate Student in Computer Science | Software Engineering & Data Analytics  
 
-\copy sales(sale_id, sale_date, product_id, customer_id, total, rating) 
-FROM 'tables/sales.csv' DELIMITER ',' CSV HEADER;
+- 💼 Focus: Software Development, Cloud Computing, Data Infrastructure  
+- 🔧 Skills: C++, Python, PostgreSQL, Data Analytics, Cloud Platforms  
+- 📫 Contact: [your_email@example.com]  
+- 🌐 GitHub: [github.com/yourusername](https://github.com/PELLURUMANASA)  
+- 💡 Passionate about **data-driven solutions, scalable systems, and analytics**  
 
-4. Run Advanced Queries
-\i sql/Mondau_coffee_advance.sql
-
-📊 Example Queries
-1. Find average sales per customer per city
-SELECT c.customer_id, ci.city_id, ROUND(AVG(s.total)::numeric, 2) AS avg_sales
-FROM customers AS c
-LEFT JOIN sales AS s ON c.customer_id = s.customer_id
-JOIN city AS ci ON ci.city_id = c.city_id
-GROUP BY c.customer_id, ci.city_id;
-
-2. Top 5 products by sales amount
-SELECT p.product_name, SUM(s.total) AS total_sales
-FROM products p
-JOIN sales s ON p.product_id = s.product_id
-GROUP BY p.product_name
-ORDER BY total_sales DESC
-LIMIT 5;
-
-3. Customers with highest ratings
-SELECT c.customer_name, AVG(s.rating) AS avg_rating
-FROM customers c
-JOIN sales s ON c.customer_id = s.customer_id
-GROUP BY c.customer_name
-ORDER BY avg_rating DESC;
-
-📌 Recommendations
-
-Based on the analysis of sales, customers, and city data, the top three cities for new store openings are:
-
-🏆 City 1: Pune
-
-Average rent per customer is very low.
-
-Highest total revenue among all cities.
-
-Average sales per customer is also high.
-
-🥈 City 2: Delhi
-
-Highest estimated coffee consumers at 7.7 million.
-
-Largest number of customers (68).
-
-Average rent per customer is 330 (well under 500).
-
-🥉 City 3: Jaipur
-
-Highest number of customers at 69.
-
-Average rent per customer is very low at 156.
-
-Average sales per customer is 11.6k, making it highly profitable.
-
-🚀 Features
-
-Relational schema with primary/foreign keys
-
-CSV-based sample data
-
-Advanced queries (joins, grouping, aggregates)
-
-ERD visualization and custom logo
-
-Business insights for store expansion strategy
-
-🛠️ Tools Used
-
-PostgreSQL 17
-
-pgAdmin / psql CLI
-
-DBeaver (for ERD design)
-
-👩‍💻 Author
-
-Manasa Reddy
-Graduate Student – Computer Science (Software Engineering & Data Analytics)
 
 
 
