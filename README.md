@@ -4,7 +4,7 @@ This project analyzes **coffee sales, customer demographics, and city-level data
 
 
 ## 🖼️ Logo
-![Logo](images/logo.png)
+![Logo](https://github.com/PELLURUMANASA/Monday_coffee/blob/main/Images/Monday_db.png)
 
 ## 📊 ERD
 ![ERD](https://github.com/PELLURUMANASA/Monday_coffee/blob/main/Images/ERD_SCHEMAS.pgerd.png)
